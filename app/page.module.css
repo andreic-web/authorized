@@ -1,0 +1,233 @@
+.page {
+  --background: #fafafa;
+  --foreground: #fff;
+
+  --text-primary: #000;
+  --text-secondary: #666;
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+  --button-secondary-border: #ebebeb;
+
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-geist-sans);
+  background-color: var(--background);
+}
+
+.main {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 400px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: var(--foreground);
+  padding: 60px 30px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 24px;
+}
+
+.intro h1 {
+  max-width: 320px;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -2.4px;
+  text-wrap: balance;
+  color: var(--text-primary);
+}
+
+.intro p {
+  max-width: 440px;
+  font-size: 18px;
+  line-height: 32px;
+  text-wrap: balance;
+  color: var(--text-secondary);
+}
+
+.intro a {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.ctas {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 440px;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.ctas a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 128px;
+  border: 1px solid transparent;
+  transition: 0.2s;
+  cursor: pointer;
+  width: fit-content;
+  font-weight: 500;
+}
+
+a.primary {
+  background: var(--text-primary);
+  color: var(--background);
+  gap: 8px;
+}
+
+a.secondary {
+  border-color: var(--button-secondary-border);
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  a.primary:hover {
+    background: var(--button-primary-hover);
+    border-color: transparent;
+  }
+
+  a.secondary:hover {
+    background: var(--button-secondary-hover);
+    border-color: transparent;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 48px 24px;
+  }
+
+  .intro {
+    gap: 16px;
+  }
+
+  .intro h1 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -1.92px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo {
+    filter: invert();
+  }
+
+  .page {
+    --background: #000;
+    --foreground: #000;
+
+    --text-primary: #ededed;
+    --text-secondary: #999;
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+    --button-secondary-border: #1a1a1a;
+  }
+}
+
+.form {
+  max-width: 500px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.input {
+  border-radius: 6px;
+  border: 2px solid #ff00ff;
+  padding: 20px 30px;
+  width: 100%;
+}
+
+.login {
+  border-radius: 6px;
+  display: block;
+  border: 2px solid #ff00ff;
+  background: #008000;
+  color: #000000;
+  cursor: crosshair;
+  padding: 20px 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.login:hover {
+  font-style: italic;
+  color: #0000ff;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.register {
+  display: block;
+  border-radius: 6px;
+  border: 2px solid #ff00ff;
+  background: #4b0082;
+  color: #ffffff;
+  cursor: crosshair;
+  text-align: center;
+  padding: 20px 30px;
+  width: 100%;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.register:hover {
+  font-style: italic;
+  color: #e6e6fa;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.h1 {
+  color: #ff8f00;
+  font-size: 40px;
+  width: 100%;
+  text-shadow: 3px 3px #fff8e7;
+  text-align: center;
+}
+
+.center,
+.center_registry {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 60px 20px;
+}
+
+.center {
+  background-color: #ffd800;
+}
+
+.center_registry {
+  background-color: #017964;
+}
+
+.h1register {
+  color: #1f456e;
+  font-size: 40px;
+  width: 100%;
+  text-shadow: 3px 3px #63c5da;
+  text-align: center;
+}
